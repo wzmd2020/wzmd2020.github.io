@@ -1,0 +1,13 @@
+---
+layout: default
+title: Wybrane zagadnienia matematyki dyskretnej
+---
+<h1>Wybrane zagadnienia matematyki dyskretnej</h1>
+
+<ul>
+  {% for tutorial in site.tutorials %}
+    <li>
+        <h2><a href="{{ tutorial.url }}"> {{ tutorial.name }} </a></h2>
+    </li>
+  {% endfor %}
+</ul>

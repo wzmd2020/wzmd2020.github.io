@@ -1,0 +1,36 @@
+---
+layout: default
+---
+<h2 class="text-center bg-info">{{ page.name }}</h2>
+
+<div class="text-center bg-light">
+{{ content }}
+</div>
+
+<ul class="bg-light">
+  {% assign filtered_problems = site.problems | where: 'tutorial', page.short_name %}
+  {% for problem in filtered_problems %}
+  <div class="text-center">
+      <h5 >Zadanie {{ problem.problem_id }}</h5>
+      <p>
+      {{ problem }}
+      </p>
+      {% assign solutions_per_tutorials = site.solutions | where: 'tutorial', page.short_name %}
+      {% assign solution = solutions_per_tutorials | where: 'problem_id', problem.problem_id %}
+  </div>
+
+
+  <div class="text-center pb-5">
+  <p>
+  <button class="btn" type="button" data-toggle="collapse" data-target="#collapseSolution{{ problem.problem_id }}" aria-expanded="false" aria-controls="collapseExample">
+	  Pokaż rozwiązanie
+  </button>
+  </p>
+  <div class="collapse" id="collapseSolution{{ problem.problem_id }}">
+      {{ solution }}
+  </div>
+  </div>
+
+
+  {% endfor %}
+</ul>

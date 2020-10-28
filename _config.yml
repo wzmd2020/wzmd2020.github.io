@@ -1,0 +1,13 @@
+collections:
+  tutorials:
+    output: true
+    permalink: /:title
+  problems:
+  solutions:
+
+defaults:
+  - scope:
+      path: ""
+      type: "tutorials"
+    values:
+      layout: "tutorial"
