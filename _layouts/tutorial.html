@@ -1,17 +1,18 @@
 ---
 layout: default
 ---
-<h2 class="text-center bg-info">{{ page.name }}</h2>
+<div class="container">
+<h2 class="text-center bg-dark text-light pb-3 pt-2">{{ page.title }}</h2>
 
-<div class="text-center bg-light">
+<div class="text-center bg-light border border-dark mb-5">
 {{ content }}
 </div>
 
-<ul class="bg-light">
+<ul class="bg-light pt-3">
   {% assign filtered_problems = site.problems | where: 'tutorial', page.short_name %}
   {% for problem in filtered_problems %}
-  <div class="text-center">
-      <h5 >Zadanie {{ problem.problem_id }}</h5>
+  <div class="text-left">
+      <h5 class="pb-2">Zadanie {{ problem.problem_id }}</h5>
       <p>
       {{ problem }}
       </p>
@@ -20,9 +21,9 @@ layout: default
   </div>
 
 
-  <div class="text-center pb-5">
+  <div class="text-left pb-5">
   <p>
-  <button class="btn" type="button" data-toggle="collapse" data-target="#collapseSolution{{ problem.problem_id }}" aria-expanded="false" aria-controls="collapseExample">
+  <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#collapseSolution{{ problem.problem_id }}" aria-expanded="false" aria-controls="collapseExample">
 	  Pokaż rozwiązanie
   </button>
   </p>
@@ -30,7 +31,9 @@ layout: default
       {{ solution }}
   </div>
   </div>
+  <hr>
 
 
   {% endfor %}
 </ul>
+<div>

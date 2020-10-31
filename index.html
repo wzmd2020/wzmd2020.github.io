@@ -2,12 +2,12 @@
 layout: default
 title: Wybrane zagadnienia matematyki dyskretnej
 ---
-<h1>Wybrane zagadnienia matematyki dyskretnej</h1>
-
-<ul>
-  {% for tutorial in site.tutorials %}
-    <li>
-        <h2><a href="{{ tutorial.url }}"> {{ tutorial.name }} </a></h2>
-    </li>
-  {% endfor %}
-</ul>
+<div class="container">
+	<ul class="list-group list-group-item-action list-group-item-white">
+		{% for tutorial in site.tutorials %}
+		<li class="list-group-item text-center pb-2 pl-2 pt-2">
+			<h2><a href="{{ tutorial.url }}"> {{ tutorial.title }} </a></h2>
+		</li>
+		{% endfor %}
+	</ul>
+</div>

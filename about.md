@@ -2,9 +2,5 @@
 layout: default
 title: About
 ---
-<p>
-Strona poświęcona rozwiązaniom zadań z przedmiotu wybrane zagadnienia matematyki dyskretnej.
-</p>
-<p>
-Kontakt: rm360179@gmail.com
-</p>
+Tu bedzie opis jak dodawac zadanie
+{% include footer.html %}
