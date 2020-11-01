@@ -4,7 +4,7 @@ layout: default
 <div class="container">
 <h2 class="text-center bg-dark text-light pb-3 pt-2">{{ page.title }}</h2>
 
-<div class="text-center bg-light border border-dark mb-5">
+<div class="text-left bg-light border border-dark mb-5 pl-2">
 {{ content }}
 </div>
 
@@ -17,7 +17,8 @@ layout: default
       {{ problem | markdownify}}
       </p>
       {% assign solutions_per_tutorials = site.solutions | where: 'tutorial', page.short_name %}
-      {% assign solution = solutions_per_tutorials | where: 'problem_id', problem.problem_id %}
+      {% assign solutions = solutions_per_tutorials | where: 'problem_id', problem.problem_id %}
+      {% assign solution = solutions | first %}
   </div>
 
 
@@ -28,12 +29,14 @@ layout: default
   </button>
   </p>
   <div class="collapse" id="collapseSolution{{ problem.problem_id }}">
-      {{ solution | first  | markdownify }}
+      {% if solution %}
+      {{ solution  | markdownify }}
+      {% else %}
+      To zadanie nie ma jeszcze rozwiązania
+      {% endif %}
   </div>
   </div>
   <hr>
-
-
   {% endfor %}
 </ul>
 <div>
