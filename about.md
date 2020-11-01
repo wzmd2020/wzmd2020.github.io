@@ -11,11 +11,6 @@ title: About
 4. Wyślij oba pliki na rm360179@students.mimuw.edu.pl z informacją jakiego autora podać.  Wrzucę w dzień-dwa
 
 ## 2. Wersja z githubem
-TODO
-Utwórz pull request z zadaniem w _problems i swoim rozwiązaniem w _solutions.
-w [repozytorium]([https://github.com/wzmd2020/wzmd2020.github.io](https://github.com/wzmd2020/wzmd2020.github.io)).
-
+Polega na samodzielnym dodaniu plików do [repozytorium](https://github.com/wzmd2020/wzmd2020.github.io), ale do tego najlepiej postawić stronę lokalnie. Instrukcja pojawi się w README na githubie (jeszcze jej nie napisałem, więc najlepiej dodawać jak w punkcie pierwszym). Jeśli ktoś mimo wszystko ma ochotę pogrzebać w repo, to pull requesty mile widziane.
 
 {% include footer.html %}
-
-
